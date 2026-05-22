@@ -1,0 +1,25 @@
+{
+  "name": "basic-plus-vscode",
+  "displayName": "basic-plus-vscode",
+  "description": "Adds OpenInsight BASIC+ language support to vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "basic-plus",
+      "aliases": ["BASIC+", "basic-plus", "oib"],
+      "extensions": [".oib"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "basic-plus",
+      "scopeName": "source.oib",
+      "path": "./syntaxes/basic-plus.tmLanguage.json"
+    }]
+  }
+}

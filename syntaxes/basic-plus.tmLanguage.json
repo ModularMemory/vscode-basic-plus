@@ -6,24 +6,139 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#comments"
+		},
+		{
+			"include": "#varibles"
+		},
+		{
 			"include": "#strings"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.basic-plus",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.basic-plus",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.basic-plus",
-					"match": "\\\\."
+					"name": "meta.preprocessor.basic-plus",
+					"begin": "^[ \\t]*(\\#)[ \\t]*",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.separator.hash.basic-plus"
+						}
+					},
+					"end": "(?=$|[(,;* \\t]|//|/\\*)",
+					"patterns": [
+						{
+							"match": "\\w+",
+							"name": "keyword.preprocessor.basic-plus"
+						}
+					]
+				},
+				{
+					"match": "(?i:\\b(if|begin|case|loop|until|repeat|for|return|gosub|goto|then|end|else|swap|with|in|on|mode|to|setting|locate|next|read|write|oswrite|readnext|open|from|debug|select)\\b)",
+					"name": "keyword.control.basic-plus"
+				},
+				{
+					"match": "(?i:\\b(call|compile|declare|function|subroutine|charstr)\\b)",
+					"name": "storage.type.basic-plus"
+				},
+				{
+					"match": "(?i:(\\$insert)\\b)",
+					"name": "storage.type.basic-plus"
+				},
+				{
+					"match": "(?i:\\b(eq|gt|ge|lt|le|ne|_eqc|_gtc|_gec|_ltc|_lec|_nec|and|or)\\b)",
+					"name": "keyword.operator.basic-plus"
+				},
+				{
+					"match": "(?i:[ \\t]*\\b(null)\\b)",
+					"name": "constant.language.basic-plus"
+				},
+				{
+					"match": "(?i:[ \\t]*(@[\\w\\.]+)\\b)",
+					"name": "constant.language.basic-plus"
+				},
+				{
+					"match": "^(?i:(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b)(?=[ \\t]*\\())",
+					"name": "support.function.basic-plus",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.basic-plus"
+						}
+					}
+				},
+				{
+					"begin": "(?i:\\b(?:function|subroutine)\\b)",
+					"end": "(?=$|[;*/]|//)",
+					"patterns": [
+						{
+							"begin": "(?i:\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?))",
+							"beginCaptures": {
+								"1": {
+									"name": "entity.name.function.basic-plus"
+								}
+							},
+							"end": "(?=$|[(,;*]|//)"
+						}
+					]
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.asterisk.basic-plus",
+					"match": "(\\*).*(?=$)",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.comment.basic-plus"
+						}
+					}
+				},
+				{
+					"name": "comment.line.double-slash.basic-plus",
+					"match": "(//).*(?=$)",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.comment.basic-plus"
+						}
+					}
+				},
+				{
+					"name": "comment.block.basic-plus",
+					"begin": "/\\*",
+					"end": "\\*/",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.comment.basic-plus"
+						}
+					}
+				}
+			]
+		},
+		"varibles": {
+			"patterns": [
+				{
+					"name": "variable.other.readwrite.basic-plus",
+					"match": "(?<!$)[_[:alpha:]][_[:alnum:]]*"
+				},
+				{
+					"match": "-?\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b",
+					"name": "constant.numeric.asp"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.basic-plus",
+					"begin": "\"",
+					"end": "\""
+				},
+				{
+					"name": "string.quoted.single.basic-plus",
+					"begin": "'",
+					"end": "'"
 				}
 			]
 		}

@@ -1,0 +1,59 @@
+{
+    "For Loop": {
+        "prefix": [
+            "for"
+        ],
+        "body": [
+            "FOR ${2:element} = ${3:start} TO ${1:max}",
+            "\t$0",
+            "NEXT $2"
+        ],
+        "description": "A for loop."
+    },
+    "Loop": {
+        "prefix": [
+            "loop"
+        ],
+        "body": [
+            "LOOP",
+            "\t$2",
+            "UNTIL ${1:condition}",
+            "\t$0",
+            "REPEAT"
+        ],
+        "description": "A while loop."
+    },
+    "Swap": {
+        "prefix": [
+            "swap"
+        ],
+        "body": [
+            "SWAP ${1:from} WITH ${2:to} IN ${3:element}"
+        ],
+        "description": "A swap statement."
+    },
+    "If": {
+        "prefix": [
+            "if"
+        ],
+        "body": [
+            "IF ${1:condition} THEN",
+            "\t$0",
+            "END"
+        ],
+        "description": "An if block."
+    },
+    "If Else": {
+        "prefix": [
+            "if-else"
+        ],
+        "body": [
+            "IF ${1:condition} THEN",
+            "\t$3",
+            "END ELSE",
+            "\t$0",
+            "END"
+        ],
+        "description": "An if-else block."
+    }
+}

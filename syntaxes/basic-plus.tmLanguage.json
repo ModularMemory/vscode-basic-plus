@@ -19,6 +19,21 @@
 		"keywords": {
 			"patterns": [
 				{
+					"begin": "(?i:\\b(goto|gosub)\\b[ \\t]*)",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.control.basic-plus"
+						}
+					},
+					"end": "(?=[ \\t]*(?:$|[;*]|\/\/))",
+					"patterns": [
+						{
+							"match": "[_[:alpha:]][_[:alnum:]]*",
+							"name": "entity.name.function.basic-plus"
+						}
+					]
+				},
+				{
 					"match": "(?i:(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b))(?=[ \\t]*\\(\\)?)",
 					"name": "support.function.basic-plus",
 					"captures": {
@@ -63,7 +78,7 @@
 					]
 				},
 				{
-					"match": "(?i:\\b(if|begin|case|loop|until|repeat|for|return|gosub|goto|then|end|else|swap|convert|with|in|on|mode|to|setting|locate|next|read|write|oswrite|readnext|open|from|debug|select)\\b)",
+					"match": "(?i:\\b(if|begin|case|loop|until|repeat|for|return|then|end|else|swap|convert|with|in|on|mode|to|setting|locate|next|read|write|oswrite|readnext|open|from|debug|select)\\b)",
 					"name": "keyword.control.basic-plus"
 				},
 				{
@@ -85,6 +100,10 @@
 				{
 					"match": "(?i:[ \\t]*(@[\\w\\.]+)\\b)",
 					"name": "constant.language.basic-plus"
+				},
+				{
+					"name": "entity.name.function.basic-plus",
+					"match": "(?<!$)[_[:alpha:]][_[:alnum:]]*:(?=$|[ \\t;*]|\/)"
 				}
 			]
 		},

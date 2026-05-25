@@ -32,6 +32,15 @@
         ],
         "description": "A swap statement."
     },
+    "Convert": {
+        "prefix": [
+            "convert"
+        ],
+        "body": [
+            "CONVERT ${1:from} TO ${2:to} IN ${3:element}"
+        ],
+        "description": "A swap statement."
+    },
     "If": {
         "prefix": [
             "if"

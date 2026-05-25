@@ -4,6 +4,8 @@ All notable changes to the "basic-plus-vscode" extension will be documented in t
 
 ## [Unreleased]
 
+## [1.0.0]
+
 ### Added
 
 - Initial syntax higlighting for OpenInsight BASIC+

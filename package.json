@@ -1,5 +1,5 @@
 {
-  "name": "basic-plus-vscode",
+  "name": "basic-plus",
   "displayName": "Basic+ Support",
   "description": "Adds OpenInsight BASIC+ language support to vscode",
   "version": "1.0.0",

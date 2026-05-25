@@ -4,6 +4,8 @@ All notable changes to the "basic-plus" extension will be documented in this fil
 
 ## [Unreleased]
 
+- Colorize labels as functions instead of variables
+
 ## [1.0.0]
 
 ### Added

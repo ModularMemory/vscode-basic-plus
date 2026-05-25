@@ -19,6 +19,34 @@
 		"keywords": {
 			"patterns": [
 				{
+					"match": "(?i:(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b))(?=[ \\t]*\\(\\)?)",
+					"name": "support.function.basic-plus",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.basic-plus"
+						}
+					}
+				},
+				{
+					"begin": "(?i:\\b(function|subroutine)\\b[ \\t]*)",
+					"beginCaptures": {
+						"1": {
+							"name": "storage.type.basic-plus"
+						}
+					},
+					"end": "(?=[ \\t]*(?:$|[;*(]|\/\/))",
+					"patterns": [
+						{
+							"match": "(?i:(?:,[ \\t]*)?\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?))(?=[ \\t]*(?:$|[,;*]|\/\/|\\(.*?\\)))",
+							"captures": {
+								"1": {
+									"name": "entity.name.function.basic-plus"
+								}
+							}
+						}
+					]
+				},
+				{
 					"name": "meta.preprocessor.basic-plus",
 					"begin": "^[ \\t]*(\\#)[ \\t]*",
 					"beginCaptures": {
@@ -57,30 +85,6 @@
 				{
 					"match": "(?i:[ \\t]*(@[\\w\\.]+)\\b)",
 					"name": "constant.language.basic-plus"
-				},
-				{
-					"match": "^(?i:(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b)(?=[ \\t]*\\())",
-					"name": "support.function.basic-plus",
-					"captures": {
-						"1": {
-							"name": "entity.name.function.basic-plus"
-						}
-					}
-				},
-				{
-					"begin": "(?i:\\b(?:function|subroutine)\\b)",
-					"end": "(?=$|[;*/]|//)",
-					"patterns": [
-						{
-							"begin": "(?i:\\b([a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?))",
-							"beginCaptures": {
-								"1": {
-									"name": "entity.name.function.basic-plus"
-								}
-							},
-							"end": "(?=$|[(,;*]|//)"
-						}
-					]
 				}
 			]
 		},

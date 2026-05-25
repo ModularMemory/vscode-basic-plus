@@ -25,5 +25,10 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ]
+    ],
+    // when a new line should be indented or unindented
+    // "indentationRules": {
+    //     "increaseIndentPattern": "^[ \\t]*(?i:loop|until.+|for.+|.+(?:then|else))[ \\t]*(?:\\*.*)?$",
+    //     "decreaseIndentPattern": "^[ \\t]*(?i:end|repeat|next).*?$"
+    // }
 }

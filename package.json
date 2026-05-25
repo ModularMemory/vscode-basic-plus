@@ -3,6 +3,7 @@
   "displayName": "Basic+ Support/",
   "description": "Adds OpenInsight BASIC+ language support to vscode",
   "version": "1.0.0",
+  "publisher": "modularmemory",
   "author": {
     "name": "ModularMemory",
     "url": "https://github.com/ModularMemory"

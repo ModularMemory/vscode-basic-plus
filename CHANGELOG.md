@@ -4,6 +4,10 @@ All notable changes to the "basic-plus" extension will be documented in this fil
 
 ## [Unreleased]
 
+### Fixed
+
+- Typo in `Begin Case` snippet
+
 ## [1.0.1]
 
 ### Changed

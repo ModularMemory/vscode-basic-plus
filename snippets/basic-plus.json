@@ -1,19 +1,15 @@
 {
     "For Loop": {
-        "prefix": [
-            "for"
-        ],
+        "prefix": "for",
         "body": [
             "FOR ${2:element} = ${3:start} TO ${1:max}",
             "\t$0",
             "NEXT $2"
         ],
-        "description": "A for loop."
+        "description": "A FOR loop."
     },
     "Loop": {
-        "prefix": [
-            "loop"
-        ],
+        "prefix": "loop",
         "body": [
             "LOOP",
             "\t$2",
@@ -21,41 +17,44 @@
             "\t$0",
             "REPEAT"
         ],
-        "description": "A while loop."
+        "description": "A standard loop."
+    },
+    "Case": {
+        "prefix": "begin case",
+        "body": [
+            "BEGIN CASE",
+            "*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "\tCASE $1",
+            "*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "\tCASE $0",
+            "END CASE"
+        ]
     },
     "Swap": {
-        "prefix": [
-            "swap"
-        ],
+        "prefix": "swap",
         "body": [
             "SWAP ${1:from} WITH ${2:to} IN ${3:element}"
         ],
-        "description": "A swap statement."
+        "description": "A SWAP statement."
     },
     "Convert": {
-        "prefix": [
-            "convert"
-        ],
+        "prefix": "convert",
         "body": [
             "CONVERT ${1:from} TO ${2:to} IN ${3:element}"
         ],
-        "description": "A swap statement."
+        "description": "A CONVERT statement."
     },
     "If": {
-        "prefix": [
-            "if"
-        ],
+        "prefix": "if",
         "body": [
             "IF ${1:condition} THEN",
             "\t$0",
             "END"
         ],
-        "description": "An if block."
+        "description": "An IF block"
     },
     "If Else": {
-        "prefix": [
-            "if-else"
-        ],
+        "prefix": "if-else",
         "body": [
             "IF ${1:condition} THEN",
             "\t$3",
@@ -63,6 +62,6 @@
             "\t$0",
             "END"
         ],
-        "description": "An if-else block."
+        "description": "An IF-ELSE block"
     }
 }

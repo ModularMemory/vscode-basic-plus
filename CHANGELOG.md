@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "basic-plus-vscode" extension will be documented in this file.
+All notable changes to the "basic-plus" extension will be documented in this file.
 
 ## [Unreleased]
 
@@ -9,4 +9,4 @@ All notable changes to the "basic-plus-vscode" extension will be documented in t
 ### Added
 
 - Initial syntax higlighting for OpenInsight BASIC+
-- `For Loop`, `Loop`, `Swap`, `Convert`, `If`, `If Else` snippets
+- `For Loop`, `Loop`, `Begin Case`, `Swap`, `Convert`, `If`, `If Else` snippets

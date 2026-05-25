@@ -1,7 +1,7 @@
-# basic-plus-vscode
+# BASIC+ For VSCode
 
 Adds OpenInsight BASIC+ language support to VSCode
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md).
+See [CHANGELOG.md](CHANGELOG.md)

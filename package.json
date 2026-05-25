@@ -1,8 +1,16 @@
 {
   "name": "basic-plus-vscode",
-  "displayName": "basic-plus-vscode",
+  "displayName": "Basic+ Support/",
   "description": "Adds OpenInsight BASIC+ language support to vscode",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": {
+    "name": "ModularMemory",
+    "url": "https://github.com/ModularMemory"
+  },
+  "repository": {
+    "url": "https://github.com/ModularMemory/vscode-basic-plus"
+  },
+  "keywords": ["basic", "basic+", "basic-plus", "basic plus", "openinsight", "open insight"],
   "engines": {
     "vscode": "^1.120.0"
   },

@@ -1,6 +1,6 @@
 # BASIC+ For VSCode
 
-Adds OpenInsight BASIC+ language support to VSCode
+OpenInsight BASIC+ language and snippets for VSCode
 
 ## Changelog
 

@@ -4,6 +4,15 @@ All notable changes to the "basic-plus" extension will be documented in this fil
 
 ## [Unreleased]
 
+### Added
+
+- Exclamation marks can also denote comments
+- More keywords
+
+### Fixed
+
+- Asterisks always denote comments, even when used for multiplication
+
 ## [1.0.3]
 
 ### Added

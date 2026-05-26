@@ -4,6 +4,16 @@ All notable changes to the "basic-plus" extension will be documented in this fil
 
 ## [Unreleased]
 
+### Added
+
+- Missing keywords
+- `#region` folding markers
+
+### Changed
+
+- Colorize constants and character literals differently from variables
+- Lowered minimum vscode version
+
 ## [1.0.2]
 
 ### Fixed

@@ -26,6 +26,13 @@
         ["\"", "\""],
         ["'", "'"]
     ],
+    // Folding regions
+    "folding": {
+		"markers": {
+			"start": "^[ \\t]*(?i:#region)\\b",
+			"end": "^[ \\t]*(i?:#endregion)\\b"
+		}
+	},
     // when a new line should be indented or unindented
     // "indentationRules": {
     //     "increaseIndentPattern": "^[ \\t]*(?i:loop|until.+|for.+|.+(?:then|else))[ \\t]*(?:\\*.*)?$",

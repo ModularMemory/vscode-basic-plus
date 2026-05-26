@@ -82,7 +82,7 @@
 					]
 				},
 				{
-					"match": "(?i:\\b(if|begin|case|loop|until|repeat|for|return|then|end|else|swap|convert|with|in|on|mode|to|using|setting|locate|next|read|write|oswrite|osdelete|readnext|open|from|debug|select|clearselect)\\b)",
+					"match": "(?i:\\b(if|begin|case|loop|until|repeat|for|return|then|end|else|swap|convert|with|in|on|mode|to|using|setting|locate|next|delete|read|write|writev|oswrite|osdelete|readnext|open|from|debug|select|clearselect)\\b)",
 					"name": "keyword.control.basic-plus"
 				},
 				{

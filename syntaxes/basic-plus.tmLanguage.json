@@ -38,6 +38,10 @@
 					]
 				},
 				{
+					"match": "(?i:(\\bif\\b)[ \\t]*(?=\\())",
+					"name": "keyword.control.basic-plus"
+				},
+				{
 					"match": "(?i:(\\b[a-zA-Z_\\x7f-\\xff][a-zA-Z0-9_\\x7f-\\xff]*?\\b))(?=[ \\t]*\\(\\)?)",
 					"name": "support.function.basic-plus",
 					"captures": {

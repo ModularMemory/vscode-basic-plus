@@ -163,7 +163,7 @@
 					"name": "variable.other.constant.basic-plus"
 				},
 				{
-					"match": "(?<!$)[_[:alpha:]][_[:alnum:]]*@?",
+					"match": "(?<!$)[_[:alpha:]][_[:alnum:]@\\%]*",
 					"name": "variable.other.readwrite.basic-plus"
 				},
 				{

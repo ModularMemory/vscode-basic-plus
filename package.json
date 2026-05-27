@@ -2,7 +2,7 @@
   "name": "basic-plus",
   "displayName": "Basic+ Support",
   "description": "OpenInsight BASIC+ language and snippets for VSCode",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "modularmemory",
   "author": {
     "name": "ModularMemory",

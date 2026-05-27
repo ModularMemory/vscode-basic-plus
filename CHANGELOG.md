@@ -12,6 +12,7 @@ All notable changes to the "basic-plus" extension will be documented in this fil
 ### Fixed
 
 - Asterisks always denote comments, even when used for multiplication
+- `IF ()` highlights as a function instead of a keyword
 
 ## [1.0.3]
 
